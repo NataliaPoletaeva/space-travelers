@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../images/3212567.png';
-import '../styling/Header.css'
+import '../styling/Header.css';
 
 const Header = () => {
   const links = [
@@ -24,8 +24,8 @@ const Header = () => {
 
   return (
     <header>
-      <div className='logo-corner'>
-        <img className='logo-img' src={logo} alt="Space Travelers&apos; Hub" />
+      <div className="logo-corner">
+        <img className="logo-img" src={logo} alt="Space Travelers&apos; Hub" />
         <h1 className="logo">Space Travelers&apos; Hub</h1>
       </div>
       <nav>
