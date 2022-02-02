@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MissionItem from './MissionItem';
 import { fetchMissionAPI } from '../../redux/missions/missions';
+import '../styling/Missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionsReducer);
@@ -18,15 +19,11 @@ const Missions = () => {
         <div className="header-item">Join/Leave</div>
       </div>
       <ul className="missions">
-        <li className="mission-item">
-          {missions.map((mission) => (
-            <MissionItem
-              key={mission.id}
-              name={mission.name}
-              description={mission.description}
-            />
-          ))}
-        </li>
+        {missions.map((mission) => (
+          <li className="mission-item" key={mission.id}>
+            <MissionItem mission={mission} />
+          </li>
+        ))}
       </ul>
     </div>
   );
