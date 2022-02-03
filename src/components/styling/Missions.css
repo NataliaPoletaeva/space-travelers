@@ -12,10 +12,6 @@ body {
   grid-template-columns: 1fr 5fr 1fr 1fr;
 }
 
-.hello {
-  padding:0;
-}
-
 .missions {
   list-style: none;
   width: 100%;

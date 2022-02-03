@@ -44,3 +44,8 @@ nav {
   text-decoration: none;
   color: #047dff;
 }
+
+.active {
+  text-decoration: underline;
+  font-weight: 700;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import RocketItem from './RocketItems';
-import './styling/rocket.css';
+import '../styling/rocket.css';
 
 const Rockets = () => {
   const rockets = [
