@@ -19,7 +19,6 @@ const Missions = () => {
         <div className="header-item">Join/Leave</div>
       </div>
       <ul className="missions">
-        {console.log(missions)}
         {missions.map((mission) => (
           <li className="mission-item" key={mission.id}>
             <MissionItem mission={mission} />
