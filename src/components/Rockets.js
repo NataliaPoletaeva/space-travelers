@@ -1,6 +1,6 @@
 import React from 'react';
 import RocketItem from './RocketItems';
-import './styles/rocket.css';
+import './styling/rocket.css';
 
 const Rockets = () => {
   const rockets = [
@@ -26,10 +26,10 @@ const Rockets = () => {
   return (
     <main>
       {
-      rockets.map((rocket) => (
-        <RocketItem key={rocket.id} rocket={rocket} />
-      ))
-    }
+        rockets.map((rocket) => (
+          <RocketItem key={rocket.id} rocket={rocket} />
+        ))
+      }
     </main>
   );
 };

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.mission-header,
+.mission-item {
+  width: 85%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr;
+}
+
+.hello {
+  padding:0;
+}
+
+.missions {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header-item {
+  font-weight: 700;
+  border: 1px solid #e5e7ea;
+  padding: 1rem 0;
+}
+
+.mission-part {
+  border: 1px solid #e5e7ea;
+}
+
+.join-or-leave {
+  box-sizing: border-box;
+  all: unset;
+  width: 70%;
+  border: 1px solid #e5e7ea;
+  margin: 50% auto;
+}
