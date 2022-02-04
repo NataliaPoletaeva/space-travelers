@@ -13,18 +13,18 @@ const MissionItem = (props) => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="mission-part">{name}</div>
+      <div className="mission-name">{name}</div>
       <div className="mission-part">{description}</div>
       <div className="mission-part">
         {reserved
-          && <p className="ActiveStatus">Active Member</p>}
+          && <p className="badge badge-active">Active Member</p>}
         {!reserved
-          && <p className="status">NOT A MEMBER</p>}
+          && <p className="badge badge-inactive">NOT A MEMBER</p>}
       </div>
       <div className="mission-part">
         {!reserved
           && (
-            <button type="button" className="mission-btn" onClick={() => dispatch(joinMission(id))}>
+            <button type="button" className="mission-btn-join" onClick={() => dispatch(joinMission(id))}>
               Join Mission
             </button>
           )}
