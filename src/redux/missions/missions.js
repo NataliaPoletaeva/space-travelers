@@ -59,9 +59,9 @@ const missionsReducer = (state = initialState, action) => {
     case FETCH_MISSIONS:
       return action.payload;
     case JOIN_MISSION:
-      return joinMission(state.mission, action.payload);
+      return joinMissionAPI(state, action.payload);
     case LEAVE_MISSION:
-      return leaveMission(state.mission, action.payload);
+      return leaveMissionAPI(state, action.payload);
     default:
       return state;
   }
