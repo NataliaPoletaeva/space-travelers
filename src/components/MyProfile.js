@@ -1,7 +1,10 @@
 import React from 'react';
+import MissionProfile from './missionComponents/MissionProfile';
 
-function MyProfile() {
-  return <div>Draft</div>;
-}
+const MyProfile = () => (
+  <div className="profile">
+    <MissionProfile />
+  </div>
+);
 
 export default MyProfile;
