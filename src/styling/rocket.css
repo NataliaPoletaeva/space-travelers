@@ -1,0 +1,52 @@
+.rocket-container {
+  display: flex;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.rocket-details {
+  padding-left: 30px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
+.rocket-reserve-btn {
+  background-color: rgb(61, 61, 253);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 7rem;
+  height: 1.8rem;
+}
+
+span {
+  background-color: rgb(61, 61, 253);
+  color: white;
+  border-radius: 4px;
+  width: 6rem;
+}
+
+.rocket-reserve-btn:hover {
+  background-color: blue;
+  color: white;
+  transition: 0.2s ease-in;
+}
+
+.rocket-cancel-btn {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 4px;
+  width: 7rem;
+  height: 1.8rem;
+}
+
+.rocket-cancel-btn:hover {
+  background-color: red;
+  color: white;
+  transition: 0.2s ease-in;
+}
