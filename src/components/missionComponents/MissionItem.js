@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import '../styling/Missions.css';
 import { useDispatch } from 'react-redux';
-import { joinMissionAPI, leaveMissionAPI } from '../../redux/missions/missions';
+import { joinMission, leaveMission } from '../../redux/missions/missions';
 
 const MissionItem = (props) => {
   const {
@@ -11,25 +11,29 @@ const MissionItem = (props) => {
     },
   } = props;
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(joinMissionAPI, leaveMissionAPI);
-  }, [dispatch]);
   return (
     <>
       <div className="mission-part">{name}</div>
       <div className="mission-part">{description}</div>
-      <div className="mission-part">Not a member</div>
       <div className="mission-part">
-        {reserved && (
-          <button type="button" className="mission-btn" onClick={leaveMissionAPI(id)}>
-            Leave Mission
-          </button>
-        )}
-        {!reserved && (
-          <button type="button" className="mission-btn" onClick={joinMissionAPI(id)}>
-            Join Mission
-          </button>
-        )}
+        {reserved
+          && <p className="ActiveStatus">Active Member</p>}
+        {!reserved
+          && <p className="status">NOT A MEMBER</p>}
+      </div>
+      <div className="mission-part">
+        {!reserved
+          && (
+            <button type="button" className="mission-btn" onClick={() => dispatch(joinMission(id))}>
+              Join Mission
+            </button>
+          )}
+        {reserved
+          && (
+            <button type="button" className="mission-btn" onClick={() => dispatch(leaveMission(id))}>
+              Leave Mission
+            </button>
+          )}
       </div>
     </>
   );

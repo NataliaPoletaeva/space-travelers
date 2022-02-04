@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 body {
-  margin: 0;
-  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .mission-header,
@@ -29,10 +30,10 @@ body {
   border: 1px solid #e5e7ea;
 }
 
-.join-or-leave {
+.mission-btn {
   box-sizing: border-box;
   all: unset;
   width: 70%;
   border: 1px solid #e5e7ea;
-  margin: 50% auto;
+  margin: auto 13%;
 }

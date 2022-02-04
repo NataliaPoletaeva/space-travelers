@@ -8,8 +8,10 @@ const Missions = () => {
   const missions = useSelector((state) => state.missionsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchMissionAPI());
-  }, [dispatch]);
+    if (missions.length === 0) {
+      dispatch(fetchMissionAPI());
+    }
+  }, []);
   return (
     <div>
       <div className="mission-header">
