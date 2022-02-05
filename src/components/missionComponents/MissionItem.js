@@ -41,7 +41,7 @@ const MissionItem = (props) => {
 
 MissionItem.propTypes = {
   mission: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
     reserved: PropTypes.bool,
