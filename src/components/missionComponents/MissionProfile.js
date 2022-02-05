@@ -7,8 +7,9 @@ const MissionProfile = () => {
   const joinedMissions = missions.filter((mission) => mission.reserved === true);
   return (
     <div className="profile-missions">
-      <h2 className="header-profile-mission">My Missions</h2>
+      <h2>My Missions</h2>
       <ul className="missions-list">
+        {joinedMissions.length === 0 && <p>No Joined Missions</p>}
         {joinedMissions.map((mission) => (
           <li className="joined-mission" key={mission.id}>{mission.name}</li>
         ))}

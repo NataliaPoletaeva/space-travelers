@@ -37,8 +37,6 @@ body {
 .mission-part {
   border: 1px solid #e5e7ea;
   padding: 0.5rem 0.35rem;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .badge-active,
@@ -51,14 +49,19 @@ body {
   padding: 0.1rem;
   border-radius: 0.35rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .badge-active {
   background-color: #1ca3b9;
+  transition: 0.2s ease-in;
 }
 
 .badge-inactive {
   background-color: #6d757d;
+  transition: 0.2s ease-in;
 }
 
 .mission-btn,
@@ -78,12 +81,44 @@ body {
   color: #f00;
 }
 
+.mission-btn:hover {
+  border: 1px solid #f00;
+  color: #fff;
+  background-color: #f00;
+  transition: 0.2s ease-in;
+}
+
+.mission-btn:active {
+  background-color: #e60000f3;
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
 .mission-btn-join {
   border: 1px solid #000;
   color: #000;
 }
 
-.profile-missions {
+.mission-btn-join:hover {
+  font-weight: 700;
+  transition: 0.2s ease-in;
+}
+
+.mission-btn-join:active {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-missions,
+.reserve-container-top {
   width: 35%;
   margin: 1% 7%;
 }
@@ -92,12 +127,14 @@ body {
   margin: 0;
 }
 
-.missions-list {
+.missions-list,
+.reserve-container {
   list-style: none;
   padding: 0;
 }
 
-.joined-mission {
+.joined-mission,
+.reserve-item {
   padding: 0.5rem;
   border: 1px solid #ccc;
 }

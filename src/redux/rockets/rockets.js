@@ -5,7 +5,7 @@ const FETCH_ROCKET = 'spaceTravelersHub/rockets/FETCH_ROCKET';
 const BOOK_ROCKET = 'spaceTravelersHub/rockets/BOOK_ROCKET';
 
 // actions
-const fetchRocket = (payload) => ({
+export const fetchRocket = (payload) => ({
   type: FETCH_ROCKET,
   payload,
 });
@@ -37,9 +37,9 @@ export const fetchRocketApi = () => async (dispatch) => {
 
 // rocket-booking
 
-const reserveCancelRocket = (state, payload) => {
+const reserveCancelRocket = (state, id) => {
   const newState = state.map((rocket) => {
-    if (rocket.id !== payload) return rocket;
+    if (rocket.id !== id) return rocket;
     return { ...rocket, reserved: !rocket.reserved };
   });
   return newState;
