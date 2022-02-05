@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { bookRocket } from '../../redux/rockets/rockets';
-import '../../styling/rocket.css';
+import '../styling/rocket.css';
 
 const RocketItem = (props) => {
   const {
@@ -21,9 +21,9 @@ const RocketItem = (props) => {
         <h2 className="rocket-title">{name}</h2>
         <p className="rocket-description">
           {reserved && (
-          <span>
-            Reserved
-          </span>
+            <span>
+              Reserved
+            </span>
           )}
           {' '}
           {description}
